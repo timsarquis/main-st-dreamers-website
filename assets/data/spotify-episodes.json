@@ -1,5 +1,114 @@
 {
-  "episodes": [],
-  "updatedAt": null,
+  "episodes": [
+    {
+      "id": "03TsHNGi1PcGUpgN35gg36",
+      "uri": "spotify:episode:03TsHNGi1PcGUpgN35gg36",
+      "url": "https://open.spotify.com/episode/03TsHNGi1PcGUpgN35gg36",
+      "title": "Inside Pixar Studios! Secret Rooms, Movie Magic & Disney Hot Takes",
+      "releaseDate": "2026-10-05",
+      "durationMs": 4646549,
+      "hasVideo": true
+    },
+    {
+      "id": "73M3lL3RHNyR9B651j4Ds0",
+      "uri": "spotify:episode:73M3lL3RHNyR9B651j4Ds0",
+      "url": "https://open.spotify.com/episode/73M3lL3RHNyR9B651j4Ds0",
+      "title": "We’re Building a Disneyland App to Help You Use Your Phone Less",
+      "releaseDate": "2026-09-16",
+      "durationMs": 3910968,
+      "hasVideo": false
+    },
+    {
+      "id": "45RtNGWvmIKtcCVe3J5vyf",
+      "uri": "spotify:episode:45RtNGWvmIKtcCVe3J5vyf",
+      "url": "https://open.spotify.com/episode/45RtNGWvmIKtcCVe3J5vyf",
+      "title": "Disney Parks Etiquette: Who’s Actually Wrong?",
+      "releaseDate": "2026-08-31",
+      "durationMs": 3212695,
+      "hasVideo": false
+    },
+    {
+      "id": "60K6jOWph8WpsjVD6pcFj6",
+      "uri": "spotify:episode:60K6jOWph8WpsjVD6pcFj6",
+      "url": "https://open.spotify.com/episode/60K6jOWph8WpsjVD6pcFj6",
+      "title": "D23 Recap: Tomorrowland Is FINALLY Getting Some Love!",
+      "releaseDate": "2026-08-17",
+      "durationMs": 3543536,
+      "hasVideo": false
+    },
+    {
+      "id": "6ceUtGpVupGUYdf0GonTxi",
+      "uri": "spotify:episode:6ceUtGpVupGUYdf0GonTxi",
+      "url": "https://open.spotify.com/episode/6ceUtGpVupGUYdf0GonTxi",
+      "title": "We Met John Stamos (Sort Of) + Big Disneyland News",
+      "releaseDate": "2026-07-13",
+      "durationMs": 2922835,
+      "hasVideo": false
+    },
+    {
+      "id": "5Huz8dMWwrOhq91D6DMAea",
+      "uri": "spotify:episode:5Huz8dMWwrOhq91D6DMAea",
+      "url": "https://open.spotify.com/episode/5Huz8dMWwrOhq91D6DMAea",
+      "title": "Toy Story 5 Surprised Us (And Called Out Every Parent)",
+      "releaseDate": "2026-06-22",
+      "durationMs": 3108414,
+      "hasVideo": false
+    },
+    {
+      "id": "60DodqTNy5woSLKHhGeInL",
+      "uri": "spotify:episode:60DodqTNy5woSLKHhGeInL",
+      "url": "https://open.spotify.com/episode/60DodqTNy5woSLKHhGeInL",
+      "title": "Bluey, Breakdowns & Batuu",
+      "releaseDate": "2026-05-26",
+      "durationMs": 4383888,
+      "hasVideo": false
+    },
+    {
+      "id": "7A0tWoVseO8blgd7VXlHM8",
+      "uri": "spotify:episode:7A0tWoVseO8blgd7VXlHM8",
+      "url": "https://open.spotify.com/episode/7A0tWoVseO8blgd7VXlHM8",
+      "title": "Inside Disneyland’s Club 33",
+      "releaseDate": "2026-05-13",
+      "durationMs": 5208320,
+      "hasVideo": true
+    },
+    {
+      "id": "2VYK8ToGkRPdsXQ3ccV3Go",
+      "uri": "spotify:episode:2VYK8ToGkRPdsXQ3ccV3Go",
+      "url": "https://open.spotify.com/episode/2VYK8ToGkRPdsXQ3ccV3Go",
+      "title": "The Disney Debate Episode: Rides, Snacks & Impossible Choices",
+      "releaseDate": "2026-05-04",
+      "durationMs": 3464213,
+      "hasVideo": true
+    },
+    {
+      "id": "1Z1w44Y9Eo0jteRC5CXX6V",
+      "uri": "spotify:episode:1Z1w44Y9Eo0jteRC5CXX6V",
+      "url": "https://open.spotify.com/episode/1Z1w44Y9Eo0jteRC5CXX6V",
+      "title": "Bluey Took Over Disneyland… and It Was Chaos",
+      "releaseDate": "2026-03-24",
+      "durationMs": 2302677,
+      "hasVideo": true
+    },
+    {
+      "id": "1TcPANM6vkyrlPTIdVLiSl",
+      "uri": "spotify:episode:1TcPANM6vkyrlPTIdVLiSl",
+      "url": "https://open.spotify.com/episode/1TcPANM6vkyrlPTIdVLiSl",
+      "title": "Still Dreaming: 4 Years of Disney Magic and a Surprise Reunion",
+      "releaseDate": "2026-03-09",
+      "durationMs": 4239765,
+      "hasVideo": true
+    },
+    {
+      "id": "7kXKi1jUk7xmpXbBwCCMDR",
+      "uri": "spotify:episode:7kXKi1jUk7xmpXbBwCCMDR",
+      "url": "https://open.spotify.com/episode/7kXKi1jUk7xmpXbBwCCMDR",
+      "title": "Disney California Adventure at 25: The Wild Story Behind the Reimagining",
+      "releaseDate": "2026-03-02",
+      "durationMs": 4648299,
+      "hasVideo": true
+    }
+  ],
+  "updatedAt": "2026-10-10T22:57:45.785380+00:00",
   "stale": false
 }

@@ -1,0 +1,36 @@
+name: Refresh podcast episodes
+on:
+  schedule:
+    - cron: '17,47 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: podcast-pages
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Refresh the current Spotify episode list
+        run: python scripts/refresh-episodes.py
+      - name: Prepare only public website files
+        run: |
+          mkdir /tmp/website
+          cp *.html *.css *.js .nojekyll /tmp/website/
+          cp -R assets about podcast shop park-scout /tmp/website/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: /tmp/website
+      - name: Publish updated episode list with the website
+        id: deployment
+        uses: actions/deploy-pages@v4
