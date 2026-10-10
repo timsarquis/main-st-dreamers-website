@@ -1,3 +1,161 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Park Scout | Main St. Dreamers</title><meta name="description" content="Park Scout helps you spend less time checking your phone and more time enjoying Disneyland Resort in California."><meta property="og:title" content="Park Scout | Main St. Dreamers"><meta property="og:description" content="Park Scout helps you spend less time checking your phone and more time enjoying Disneyland Resort in California."><meta property="og:type" content="website"><link rel="stylesheet" href="../assets/css/styles.css"><script defer src="../assets/js/main.js"></script></head>
-<body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="../">Main St. Dreamers<span>Good days. Good company.</span></a><nav aria-label="Main navigation"><a href="../podcast/">Podcast</a><a href="../shop/">Shop</a><a href="../park-scout/">Park Scout</a><a href="../about/">About</a></nav></header><main id="main"><section class="page-hero"><p class="eyebrow">Park Scout</p><h1>Phone down. Park day on.</h1><p class="lead">Park Scout helps you spend less time checking your phone and more time enjoying Disneyland Resort in California.</p><div class="notice"><p>Made for iPhone. We’ll share app details and the App Store link here soon.</p></div><a class="text-link" href="../">Back to Main St. Dreamers ↗</a></section></main><footer><a class="brand" href="../">Main St. Dreamers</a><nav aria-label="Footer navigation"><a href="../podcast/">Podcast</a><a href="../shop/">Shop</a><a href="../park-scout/">Park Scout</a><a href="../about/">About</a></nav><p>© <span data-year>2026</span> Main St. Dreamers</p></footer></body></html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#173b5d" />
+    <meta name="description" content="Park Scout helps you spend less time checking your phone and more time enjoying the Disneyland Resort in Anaheim, California, with live park information, plus Park Scout+ picks, Lightning Lane watches, and Lock Screen updates." />
+    <title>Park Scout | More park time, less phone time</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../park-scout.js" defer></script>
+  </head>
+  <body class="scout-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="scout-header">
+      <a class="wordmark" href="../index.html"><span class="spark" aria-hidden="true">↗</span><span>Main St. Dreamers</span></a>
+      <nav aria-label="Main navigation"><a href="../index.html">Home</a><a href="../index.html#episodes">Podcast</a><a href="../shop/" target="_blank" rel="noreferrer">Shop ↗</a></nav>
+    </header>
+    <main id="main">
+      <section class="scout-hero">
+        <div>
+          <p class="eyebrow">Meet Park Scout</p>
+          <h1>Look up.<br /><em>You’re at the park.</em></h1>
+          <p>Park Scout is made for days at the Disneyland Resort in Anaheim, California. Its goal is simple: less time looking at your phone, more time enjoying the parks. Check waits and Lightning Lane return times for free. With Park Scout+, get a good next pick, let alerts watch for changes, and glance at favorite rides on your Lock Screen. Then get back to the people you came with.</p>
+          <a class="button button-primary" href="#how-it-works">How it works</a>
+          <p class="scout-platform-note">Made for iPhone. Start free, or <a href="#park-scout-plus">see what Park Scout+ adds</a>.</p>
+        </div>
+        <div class="scout-hero-visual">
+          <div class="scout-app-badge"><img src="../assets/brand/park-scout-app-icon.png" alt="Park Scout app icon" /></div>
+          <div class="scout-device-placeholder"><img src="../assets/brand/park-scout-launch-screen.png" alt="Park Scout launch screen with its logo over an illustrated park scene" /></div>
+        </div>
+      </section>
+
+      <section class="scout-intro section" id="how-it-works">
+        <div class="scout-intro-heading"><p class="eyebrow blue">The idea is simple</p><h2>A little planning. A lot less checking.</h2><p>Save your group and favorite rides in free Park Scout. When you want help with “what now?”, Park Scout+ suggests a next step and watches the things you care about while you enjoy your day.</p></div>
+        <div class="scout-steps">
+          <article><span>01</span><h3>Tell us who’s coming</h3><p>Add your crew and what each person is into. You can also say how long you’re happy to wait and whether you’d rather take it easy or keep moving.</p></article>
+          <article><span>02</span><h3>See what looks good</h3><p>Browse current waits and Lightning Lane return times. With Park Scout+, you can also get a suggestion that fits your group. If it doesn’t sound fun, ask for another.</p></article>
+          <article><span>03</span><h3>Get back to your day</h3><p>Set a standby wait alert for free. Park Scout+ adds Lightning Lane watches and favorite waits on your Lock Screen. Tuck your phone away until you actually need it.</p></article>
+        </div>
+        <div class="scout-gallery-heading"><h3>A little setup now, less checking later</h3><p>Tell Park Scout what matters to your group. You can always change your answers later.</p></div>
+        <div class="scout-setup-showcase" id="setup-showcase" aria-label="Park Scout setup walkthrough">
+          <div class="scout-setup-story">
+            <span class="scout-setup-count" id="setup-count">01 / 07</span>
+            <h4 id="setup-title">Start with your crew.</h4>
+            <p id="setup-description">Add the adults and children coming along once, so you can get to the fun part.</p>
+            <div class="scout-setup-progress" id="setup-progress" aria-label="Walkthrough progress"></div>
+            <div class="scout-setup-controls"><button type="button" id="setup-prev" aria-label="Previous setup screen">←</button><button type="button" id="setup-next" aria-label="Next setup screen">→</button><button type="button" id="setup-pause" aria-label="Pause slideshow">Pause</button></div>
+          </div>
+          <div class="scout-setup-viewport">
+            <div class="scout-setup-track" id="setup-track">
+              <a href="../assets/screenshots/park-scout-3381.jpg" target="_blank" rel="noreferrer" data-title="Start with your crew." data-description="Add the adults and children coming along once, so you can get to the fun part."><img src="../assets/screenshots/park-scout-3381.jpg" alt="Add adults and children to your Park Scout crew" loading="lazy" /></a>
+              <a href="../assets/screenshots/park-scout-3382.jpg" target="_blank" rel="noreferrer" data-title="What does everyone like?" data-description="Choose the rides and shows each person loves, is fine with, or would rather skip."><img src="../assets/screenshots/park-scout-3382.jpg" alt="Choose the ride types one adult likes or would skip" loading="lazy" /></a>
+              <a href="../assets/screenshots/park-scout-3383.jpg" target="_blank" rel="noreferrer" data-title="Make room for different tastes." data-description="A gentle ride, a character, a parade—everyone gets their own say."><img src="../assets/screenshots/park-scout-3383.jpg" alt="Choose gentle rides, characters, and shows preferences for a child" loading="lazy" /></a>
+              <a href="../assets/screenshots/park-scout-3384.jpg" target="_blank" rel="noreferrer" data-title="No two park people are alike." data-description="You can set preferences for each person, and leave anything you're unsure about alone."><img src="../assets/screenshots/park-scout-3384.jpg" alt="Set another child’s ride preferences" loading="lazy" /></a>
+              <a href="../assets/screenshots/park-scout-3385.jpg" target="_blank" rel="noreferrer" data-title="Pick a comfortable pace." data-description="Tell Park Scout when a line feels too long and how much walking sounds good today."><img src="../assets/screenshots/park-scout-3385.jpg" alt="Set your preferred maximum wait and walking pace" loading="lazy" /></a>
+              <a href="../assets/screenshots/park-scout-3386.jpg" target="_blank" rel="noreferrer" data-title="Choose how you like to explore." data-description="Stay in one area or cross the park for something worth the trip. You can include shows in your picks, too."><img src="../assets/screenshots/park-scout-3386.jpg" alt="Choose whether to stay in one area and include shows in Park Picks" loading="lazy" /></a>
+              <a href="../assets/screenshots/park-scout-3387.jpg" target="_blank" rel="noreferrer" data-title="And you’re ready to go." data-description="Take a quick look at your choices, then head into the park. When you need an idea, Park Scout+ can help you choose."><img src="../assets/screenshots/park-scout-3387.jpg" alt="Review your crew, pace, and park style before starting" loading="lazy" /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scout-feature scout-feature-light">
+        <div class="scout-feature-copy"><p class="eyebrow coral-text">With Park Scout+ · One decision at a time</p><h2>“What should we do next?”</h2><p>Park Pick, included with Park Scout+, puts one idea in front of you: a ride or a show that’s coming up soon. You get a short reason for the pick, so your group can decide and move on. If it doesn’t sound right, ask for another.</p><p>If your group is comfortable splitting up, Park Scout may find a better option for each group. It also takes known height restrictions into account and can suggest Rider Switch when availability is verified.</p></div>
+        <div class="scout-feature-media"><figure><a href="../assets/screenshots/park-scout-3375.jpg" target="_blank"><img src="../assets/screenshots/park-scout-3375.jpg" alt="Park Pick recommending Star Tours with a ten-minute wait and an explanation" loading="lazy" /></a><figcaption>A Park Pick with the reasons behind it</figcaption></figure><figure><a href="../assets/screenshots/park-scout-3388.jpg" target="_blank"><img src="../assets/screenshots/park-scout-3388.jpg" alt="Park Pick recommending Pirates of the Caribbean with a thirty-minute wait" loading="lazy" /></a><figcaption>Another Park Pick for a different moment</figcaption></figure></div>
+      </section>
+
+      <section class="scout-feature scout-feature-dark" id="lightning-lane">
+        <div class="scout-feature-media">
+          <figure><a href="../assets/screenshots/park-scout-home-current.png" target="_blank" rel="noreferrer"><img src="../assets/screenshots/park-scout-home-current.png" alt="Updated Park Scout Home screen with standby waits, Lightning Lane return times, and the Lightning Lane sorting tab" loading="lazy" /></a><figcaption>Standby waits and Lightning Lane times, together</figcaption></figure>
+          <figure><a href="../assets/screenshots/park-scout-lightning-lane-alert.png" target="_blank" rel="noreferrer"><img src="../assets/screenshots/park-scout-lightning-lane-alert.png" alt="Ride Alert card for Millennium Falcon: Smugglers Run with a standby wait threshold and Lightning Lane return-time and availability controls" loading="lazy" /></a><figcaption>Choose what you’d like Park Scout+ to watch</figcaption></figure>
+        </div>
+        <div class="scout-feature-copy">
+          <p class="eyebrow">Lightning Lane watching with Park Scout+</p>
+          <h2>Stop checking for a change. Let us watch for it.</h2>
+          <p>You can see current Lightning Lane return times in free Park Scout. Tap the Lightning Lane tab beside Wait, Name, and Closest to see supported rides in return-time order.</p>
+          <p>With Park Scout+, tap a ride to choose a return time you want to watch. You can also ask for a heads-up when its Lightning Lane becomes unavailable or is available again. Save your choices, put your phone away, and let an alert bring you back when something changes—even with the app closed.</p>
+          <ol class="scout-watch-steps">
+            <li><strong>Pick a ride.</strong> Tap it on Home, or open Ride Alerts from its Nearby details.</li>
+            <li><strong>Choose your watch.</strong> Switch on a return-time alert and pick a time, or turn on either availability alert.</li>
+            <li><strong>Save and carry on.</strong> Allow notifications, then manage your watches in Ride Alerts whenever you need to.</li>
+          </ol>
+          <p class="scout-feature-note">Park Scout watches the information; you still make reservations in the official Disneyland app. It doesn’t book Lightning Lanes or include a Lightning Lane purchase. Watches end at midnight in Anaheim, and times depend on the park data available.</p>
+          <p>Just watching a standby line? Free Park Scout includes one active wait alert. Park Scout+ lets you watch multiple waits and adds temporary closure and reopening alerts.</p>
+        </div>
+      </section>
+
+      <section class="scout-feature scout-feature-light" id="live-activity">
+        <div class="scout-feature-copy">
+          <p class="eyebrow coral-text">With Park Scout+ · A glance is enough</p>
+          <h2>Your favorites, right on your Lock Screen.</h2>
+          <p>Heart the rides you care about, then tap <strong>Watch My Favorites</strong> on Home. Park Scout+ puts waits and ride status for up to six favorites on your Lock Screen, even if your choices span both parks.</p>
+          <p>That’s the Park Day Live Activity: a small view you can check without opening the app and getting pulled into another round of scrolling. Supported iPhones also show a quick view in Dynamic Island.</p>
+          <p>It can keep updating while your phone is locked. If information is delayed or missing, it won’t pretend an old wait is current. End the activity from Home when you’re done for the day.</p>
+        </div>
+        <div class="scout-feature-media scout-feature-media-single"><figure><a href="../assets/screenshots/park-scout-lock-screen-live-activity.png" target="_blank" rel="noreferrer"><img src="../assets/screenshots/park-scout-lock-screen-live-activity.png" alt="iPhone Lock Screen showing Park Scout’s Disneyland Resort Live Activity with six favorite rides, wait times, and a ride status warning" loading="lazy" /></a><figcaption>Six favorites. One glance. Back to your park day.</figcaption></figure></div>
+      </section>
+
+      <section class="scout-more section">
+        <div class="section-heading"><div><p class="eyebrow blue">When you do open the app</p><h2>Find what you need and keep moving.</h2></div></div>
+        <div class="scout-more-grid scout-more-grid-current">
+          <article><span class="scout-more-icon" aria-hidden="true">◎</span><h3>Nearby map</h3><p>See what’s around you on a map. Tap a ride for its wait and status, plus an estimated walk when a route is available.</p><a href="../assets/screenshots/park-scout-3379.jpg" target="_blank"><img src="../assets/screenshots/park-scout-3379.jpg" alt="Nearby satellite map with ride wait markers" loading="lazy" /></a></article>
+          <article><span class="scout-more-icon" aria-hidden="true">◷</span><h3>Today’s schedule</h3><p>Wondering when the park closes or whether you can still catch a show? Find today’s hours and entertainment times together.</p><a href="../assets/screenshots/park-scout-3380.jpg" target="_blank"><img src="../assets/screenshots/park-scout-3380.jpg" alt="Today screen with park hours and entertainment schedule" loading="lazy" /></a></article>
+        </div>
+        <p class="scout-data-note">These screens show examples from the app. Waits and schedules change. Park information is powered by ThemeParks.wiki; check the official Disneyland app for official park services and final details.</p>
+      </section>
+
+      <section class="scout-plans section" id="park-scout-plus">
+        <div class="scout-intro-heading"><p class="eyebrow blue">Free to start. More help when you want it.</p><h2>Park Scout or Park Scout+?</h2><p>Free Park Scout gives you the park information you need for a quick check. Park Scout+ adds suggestions and monitoring, so you can spend even less of the day looking at your phone.</p></div>
+        <div class="scout-comparison-wrap" role="region" aria-label="Park Scout and Park Scout+ comparison" tabindex="0">
+          <table class="scout-comparison">
+            <caption>What’s included in each version</caption>
+            <thead><tr><th scope="col">What you can do</th><th scope="col">Park Scout <span>Free</span></th><th scope="col">Park Scout+ <span>Day, Week, or Annual</span></th></tr></thead>
+            <tbody>
+              <tr><th scope="row">See live standby waits and ride status</th><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+              <tr><th scope="row">See current Lightning Lane return times and prices, when available</th><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+              <tr><th scope="row">Check hours, shows, and attraction details for both parks</th><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+              <tr><th scope="row">Set up your group and save favorite rides</th><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+              <tr><th scope="row">Explore Nearby and get walking estimates</th><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+              <tr><th scope="row">Get standby wait alerts</th><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span><span class="scout-feature-detail">One active alert at a time</span></td><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span><span class="scout-feature-detail">Multiple alerts at once</span></td></tr>
+              <tr><th scope="row">Get personalized Park Picks</th><td><span class="scout-feature-dash" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+              <tr><th scope="row">Watch Lightning Lane return times and availability</th><td><span class="scout-feature-dash" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+              <tr><th scope="row">Get temporary closure and reopening alerts</th><td><span class="scout-feature-dash" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+              <tr><th scope="row">Watch favorites on your Lock Screen and Dynamic Island</th><td><span class="scout-feature-dash" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td><span class="scout-feature-check" aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="scout-table-hint">Swipe across the table to compare both options.</p>
+        <div class="scout-pricing-heading"><h3>Choose the time you need.</h3><p>All three options unlock the same Park Scout+ features. Just pick what fits your visit.</p></div>
+        <div class="scout-pricing-grid">
+          <article><p class="scout-plan-name">Park Day</p><h4>$0.99</h4><p class="scout-plan-duration">24 hours from purchase</p><p>For a day at the parks. A one-time purchase that doesn’t renew.</p></article>
+          <article><p class="scout-plan-name">Park Week</p><h4>$4.99</h4><p class="scout-plan-duration">7 days from purchase</p><p>For a longer visit. Seven full 24-hour days, with no automatic renewal.</p></article>
+          <article><p class="scout-plan-name">Park Scout Annual</p><h4>$9.99<span> / year</span></h4><p class="scout-plan-duration">An annual subscription</p><p>For the trips you keep coming back for. Renews automatically each year until you cancel through Apple.</p></article>
+        </div>
+        <p class="scout-pricing-note">These are planned U.S. launch prices in USD. Check the purchase screen for current pricing in your region. You’ll find the options on Home under Settings → Park Scout+. Day and Week access starts when you buy, so choose your pass when you’re ready to use it.</p>
+      </section>
+
+      <section class="scout-faq section" id="faq">
+        <div class="section-heading"><div><p class="eyebrow blue">A little more detail</p><h2>Park Scout FAQ</h2></div></div>
+        <div class="scout-faq-list">
+          <details><summary>Which parks does Park Scout cover?</summary><p>Park Scout covers Disneyland Park and Disney California Adventure at the Disneyland Resort in Anaheim, California. It isn’t set up for Walt Disney World or other parks.</p></details>
+          <details><summary>How do I set up my group?</summary><p>When you first open Park Scout, start with who’s coming along. Add adults and children, then tell it which kinds of rides and shows each person loves, is fine with, or would rather skip. If you know a child’s height, you can add that too. After that, choose a wait time that feels reasonable, your walking pace, and whether your group is okay splitting up. You can skip setup for now and come back anytime through the people button on Home.</p></details>
+          <details><summary>What is a Park Pick?</summary><p>It’s one idea for what to do next, right on Home, included with Park Scout+. Park Scout checks current waits, what’s open, what your group likes, your favorites, and how far away things are if you’ve shared your location. It may suggest a show that’s coming up soon if you’ve chosen to include shows and parades. You’ll see a short reason for the pick, so you can decide without digging through another list. “Show me another” is always there if you want a different idea.</p></details>
+          <details><summary>Can it help if our group wants different things?</summary><p>With Park Scout+, it can. If you’ve said your group is okay splitting up, and there are at least two adults, Park Scout may suggest a good ride for each group with an adult in each one. It can also suggest Rider Switch when a height difference matters and that ride’s availability has been verified. You’ll still make the actual plans together and follow the park’s Rider Switch instructions.</p></details>
+          <details><summary>How do I get an alert when a wait drops?</summary><p>Tap the ride on Home, either in Wait Times or Favorites. Pick the wait you’re hoping for, switch on “Wait-time alert,” and save. Allow notifications if your phone asks. Park Scout can then watch that ride while you enjoy the park, even when the app is closed. The alert lasts until midnight in Anaheim. Free Park Scout gives you one active standby alert, which you can edit, cancel, or use again after it finishes. Park Scout+ adds multiple simultaneous alerts and temporary closure and reopening notifications. Manage them under Ride Alerts.</p></details>
+          <details><summary>How do I put favorite waits on my Lock Screen?</summary><p>First, tap the hearts beside the rides you want to keep an eye on. With Park Scout+, tap “Watch My Favorites” on Home. You can see waits or status for up to six favorites across both parks on the Lock Screen, plus a smaller view in Dynamic Island on supported iPhones. It’s a quick glance when you need one, without opening the app again. When you’re done, you can end your Park Day from Home.</p></details>
+          <details><summary>What’s in Nearby and Today?</summary><p>Nearby shows rides on a map with their waits. If you share your location while using the app, tap a ride to see its status and an approximate walk when Apple Maps can find a route. Today has park hours and showtimes, plus a heads-up when a show is coming up or it’s the last performance of the day. Check what you need, choose a park if you want to switch schedules, and get back to your day.</p></details>
+          <details><summary>How do Lightning Lane watches work?</summary><p>With Park Scout+, tap a ride on Home to open its Ride Alert card, or choose Ride Alerts from that ride’s Nearby details. Under Lightning Lane, turn on “Return-time alert” and choose the time you want to watch. That alert is sent once when the published return time reaches or passes your chosen time. You can also switch on “Becomes unavailable” and “Available again” to watch those changes. Tap Save and allow notifications. Your watches work while the app is closed and end at midnight in Anaheim. Find, change, or remove them in Ride Alerts.</p></details>
+          <details><summary>Does Park Scout book Lightning Lanes for me?</summary><p>No. It shows published return times and, with Park Scout+, watches for changes. You still check availability and make your reservation in the official Disneyland app. A Park Scout+ purchase doesn’t include Disney’s Lightning Lane access, and an alert doesn’t reserve a spot. “Unavailable” doesn’t always mean sold out; if current data is missing, Park Scout won’t guess.</p></details>
+          <details><summary>Do Day, Week, and Annual include different features?</summary><p>They all unlock the same Park Scout+ features. Park Day lasts 24 hours from purchase, and Park Week lasts seven full 24-hour days. Neither renews automatically. Annual is an auto-renewing yearly subscription you can manage or cancel through Apple. Open Home → Settings → Park Scout+ to see your access, purchase options, and Restore Purchases.</p></details>
+          <details><summary>Does it use my location all day?</summary><p>No. Park Scout uses your location while the app is active to help with nearby rides and walking estimates. It doesn’t save or upload your location. You can still use Park Scout without sharing it; you just won’t see location-based suggestions or walking distances.</p></details>
+          <details><summary>Can I use Park Scout on Android?</summary><p>Park Scout is for iPhone right now. We’ll add the App Store link to this page when it’s ready.</p></details>
+          <details><summary>Do I still need the Disneyland app?</summary><p>Yes, for official park services and details. Park Scout helps with the everyday “what should we do next?” decision and watches the rides you care about, so you can check your phone less often. Waits and schedules can change, and Park Scout lets you know when its information is missing or getting old.</p></details>
+        </div>
+      </section>
+
+      <section class="scout-next" id="app-store"><p class="eyebrow">For iPhone</p><h2>We’d rather be looking around, too.</h2><p>Park Scout is for iOS. The App Store link will go here when it’s ready. For now, follow along for updates.</p><div class="scout-next-actions"><a class="button button-primary app-store-placeholder" role="link" aria-disabled="true" data-app-store-link>App Store link coming soon</a><a class="underlined-link" href="https://www.instagram.com/dreaming.of.disney.podcast/" target="_blank" rel="noreferrer">Find us on Instagram ↗</a></div></section>
+    </main>
+    <footer><div><a class="wordmark footer-mark" href="../index.html"><span>Main St. Dreamers</span></a><p>Thanks for stopping by.</p></div><nav aria-label="Footer navigation"><a href="../index.html">Home</a><a href="../index.html#episodes">Podcast</a><a href="../shop/" target="_blank" rel="noreferrer">Shop</a><a href="privacy/index.html">Privacy Policy</a></nav><small>© 2026 Main St. Dreamers · Independent fan project.</small></footer>
+  </body>
+</html>
