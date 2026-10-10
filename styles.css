@@ -727,6 +727,14 @@ footer small { grid-column: 1 / -1; padding-top: 25px; color: rgba(255,255,255,.
 .scout-pricing-note { max-width: 1220px; margin: 24px auto 0; font-size: 13px; line-height: 1.7; color: #395771; }
 @media (max-width: 800px) { .scout-more-grid-current, .scout-pricing-grid { grid-template-columns: 1fr; } }
 @media (max-width: 700px) {
-  .scout-comparison th, .scout-comparison td { padding: 15px; }
-  .scout-table-hint { display: block; max-width: 1220px; margin: 12px auto 0; font-size: 12px; }
+  .scout-comparison-wrap { overflow-x: visible; }
+  .scout-comparison { min-width: 0; table-layout: fixed; font-size: 12px; line-height: 1.45; }
+  .scout-comparison caption { padding: 16px 12px; }
+  .scout-comparison th, .scout-comparison td { padding: 14px 8px; overflow-wrap: break-word; }
+  .scout-comparison thead th { font-size: 13px; }
+  .scout-comparison thead th:first-child { width: 46%; }
+  .scout-comparison thead th:not(:first-child) { width: 27%; }
+  .scout-comparison thead span { font-size: 10px; }
+  .scout-feature-detail { font-size: 11px; }
+
 }
