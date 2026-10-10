@@ -27,6 +27,7 @@ jobs:
         run: |
           mkdir /tmp/website
           cp *.html *.css *.js .nojekyll /tmp/website/
+          if [ -f CNAME ]; then cp CNAME /tmp/website/; fi
           cp -R assets about podcast shop park-scout /tmp/website/
       - uses: actions/upload-pages-artifact@v3
         with:
