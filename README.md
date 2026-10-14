@@ -27,3 +27,9 @@ The original design is preserved here, including the Park Scout screenshots, set
 ## Production migration
 
 Production canonical URLs use `https://mainstdreamers.com`. Relative navigation and assets also work under the temporary Pages project URL. When GitHub adds CNAME, the scheduled episode deployment preserves it. Domain migration is authorized for website routing only; preserve all email records, unrelated subdomains, nameservers, and registrar settings.
+
+## Search and AI crawler support
+
+Canonical production pages are listed in `sitemap.xml`; `robots.txt` allows crawling, including search and AI crawlers. This does not guarantee indexing or AI citations. Page-specific titles, descriptions, social previews, and JSON-LD describe the visible content. Podcast and About pages have distinct content; the legacy Park Scout HTML URL redirects to its canonical route. The shop route points to the storefront canonical URL and retains its existing redirect.
+
+`python scripts/render-episodes.py` publishes the current episode snapshot as ordinary HTML links and PodcastEpisode data. It runs after every scheduled Spotify refresh. `python scripts/check-seo.py` checks sitemap routes, canonical URLs, headings, structured-data syntax, in-page links, episode HTML, robots, and 404 indexing controls. The workflow includes both crawler files and deploys on pushes to main. Do not add invented app ratings, availability, or episode descriptions. FAQ markup describes the visible FAQ; no Google FAQ rich result is promised.

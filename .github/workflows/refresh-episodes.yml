@@ -1,5 +1,7 @@
 name: Refresh podcast episodes
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: '17,47 * * * *'
   workflow_dispatch:
@@ -22,11 +24,14 @@ jobs:
         with:
           python-version: '3.13'
       - name: Refresh the current Spotify episode list
-        run: python scripts/refresh-episodes.py
+        run: |
+          python scripts/refresh-episodes.py
+          python scripts/render-episodes.py
+          python scripts/check-seo.py
       - name: Prepare only public website files
         run: |
           mkdir /tmp/website
-          cp *.html *.css *.js .nojekyll /tmp/website/
+          cp *.html *.css *.js robots.txt sitemap.xml .nojekyll /tmp/website/
           if [ -f CNAME ]; then cp CNAME /tmp/website/; fi
           cp -R assets about podcast shop park-scout /tmp/website/
       - uses: actions/upload-pages-artifact@v3
