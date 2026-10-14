@@ -35,3 +35,9 @@ Canonical production pages are listed in `sitemap.xml`; `robots.txt` allows craw
 `python scripts/render-episodes.py` publishes the current episode snapshot as ordinary HTML links and PodcastEpisode data. It runs after every scheduled Spotify refresh. `python scripts/check-seo.py` checks sitemap routes, canonical URLs, headings, structured-data syntax, in-page links, episode HTML, robots, and 404 indexing controls. The workflow includes both crawler files and deploys on pushes to main. Do not add invented app ratings, availability, or episode descriptions. FAQ markup describes the visible FAQ; no Google FAQ rich result is promised.
 
 The episode renderer also updates the initial featured title, link, preview ID, and iframe to the newest episode, so the initial player matches the current catalog before JavaScript loads.
+
+## Automated RSS episode archive
+
+The official RSS now powers all individual episode pages and the podcast detail archive. The approved markup lives in `templates/episode.html`; `scripts/sync-rss.py` renders pages, transcripts, metadata, related cards, and sitemap entries using Python's standard library. `assets/data/rss-episodes.json` preserves GUID identities, stable URLs, and the last valid transcript. The existing homepage Spotify player refresh remains separate and best-effort.
+
+The existing `.github/workflows/refresh-episodes.yml` runs at minutes 17 and 47 each hour, on pushes to main, and manually. It commits only changed generated outputs and deploys through the existing Pages artifact workflow; no-op scheduled runs do neither. No account credentials or new secrets are needed. See [the archive documentation](podcast/episodes/README.md) for the feed audit, failure behavior, field contract, supported transcript formats, local commands, and manual workflow instructions.

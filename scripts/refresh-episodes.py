@@ -38,6 +38,11 @@ def main():
     data = {"episodes": episodes, "updatedAt": datetime.datetime.now(datetime.timezone.utc).isoformat(), "stale": False}
     target = ROOT / "assets/data/spotify-episodes.json"
     target.parent.mkdir(parents=True, exist_ok=True)
+    if target.exists():
+        previous = json.loads(target.read_text())
+        if previous.get("episodes") == episodes:
+            print("Spotify episode snapshot unchanged")
+            return
     target.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
     print(f"Updated {len(episodes)} published episodes")
 

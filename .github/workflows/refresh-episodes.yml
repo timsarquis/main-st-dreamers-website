@@ -1,12 +1,12 @@
-name: Refresh podcast episodes
-on:
+name: Sync Dreaming of Disney podcast episodes
+"on":
   push:
     branches: [main]
   schedule:
     - cron: '17,47 * * * *'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
@@ -23,20 +23,44 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: Refresh the current Spotify episode list
+      - name: Validate synchronization logic
+        run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: Preserve the existing homepage Spotify player refresh
         run: |
-          python scripts/refresh-episodes.py
-          python scripts/render-episodes.py
+          if python scripts/refresh-episodes.py; then
+            python scripts/render-episodes.py
+          else
+            echo "::warning::Spotify player metadata unavailable; retaining its previous snapshot"
+          fi
+      - name: Synchronize the official RSS archive
+        run: |
+          python scripts/sync-rss.py
           python scripts/check-seo.py
+      - name: Commit meaningful generated changes
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/rss-episodes.json assets/data/spotify-episodes.json index.html podcast/index.html podcast/episodes/*/index.html sitemap.xml
+          if ! git diff --cached --quiet; then
+            git commit -m "Sync Dreaming of Disney podcast episodes"
+            git push origin HEAD:main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Prepare only public website files
+        if: github.event_name == 'push' || steps.commit.outputs.changed == 'true'
         run: |
           mkdir /tmp/website
           cp *.html *.css *.js robots.txt sitemap.xml .nojekyll /tmp/website/
           if [ -f CNAME ]; then cp CNAME /tmp/website/; fi
           cp -R assets about podcast shop park-scout /tmp/website/
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name == 'push' || steps.commit.outputs.changed == 'true'
         with:
           path: /tmp/website
-      - name: Publish updated episode list with the website
+      - name: Publish synchronized website
         id: deployment
+        if: github.event_name == 'push' || steps.commit.outputs.changed == 'true'
         uses: actions/deploy-pages@v4

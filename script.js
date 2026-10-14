@@ -41,6 +41,8 @@ function selectEpisode(episode, play = false) {
 }
 
 function renderEpisodes() {
+  // The RSS archive uses static links to episode detail pages.
+  if (podcast.hasAttribute("data-static-details")) return;
   const fragment = document.createDocumentFragment();
   episodes.forEach((episode, index) => {
     const item = document.createElement("li");
