@@ -1,0 +1,10 @@
+/* Archive-only additions reuse the shared site tokens and existing episode rows. */
+.podcast-search{margin:0 0 18px}
+.podcast-search label{display:block;margin-bottom:10px;font-size:13px;font-weight:700}
+.podcast-search-field{display:flex;align-items:center;gap:8px}
+.podcast-search input{width:100%;min-width:0;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.4}
+.podcast-search input::placeholder{color:#395771;opacity:1}
+.podcast-search input:focus-visible,.podcast-search button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.podcast-search button{flex:none;min-width:44px;min-height:48px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;background:var(--cream);color:var(--ink);font-size:12px;font-weight:700;cursor:pointer}
+.podcast-search-status{margin:10px 0 0;color:#395771;font-size:13px;line-height:1.6}
+.podcast-search-status:empty{display:none}

@@ -46,3 +46,6 @@
 .transcript-disclosure[open] .transcript-open-label{display:none}
 .transcript-disclosure[open] .transcript-close-label{display:inline}
 .transcript-disclosure .transcript-copy{padding-bottom:10px}
+
+.episode-related + .episode-about{margin-top:64px}
+@media(max-width:700px){.episode-related + .episode-about{margin-top:48px}}

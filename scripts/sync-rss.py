@@ -17,6 +17,11 @@ import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from zoneinfo import ZoneInfo
 
+# Also supports importing this script directly in the existing unit tests.
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from podcast_discovery import related_indices, search_index
+
 ROOT = Path(__file__).resolve().parents[1]
 FEED = 'https://anchor.fm/s/fecb83c0/podcast/rss'
 BASE = 'https://mainstdreamers.com'
@@ -389,8 +394,9 @@ def run(root=ROOT, feed_file=None, audit=False):
     all_episodes = sorted(merged.values(), key=lambda e: (e['published'], e['guid']), reverse=True)
     template = (root / 'templates/episode.html').read_text()
     writes = {}
+    relationships = related_indices(all_episodes)
     for i, e in enumerate(all_episodes):
-        related = sorted((z for z in range(len(all_episodes)) if z != i), key=lambda z: (abs(z-i), z))[:3]
+        related = relationships[i]
         page = render_page(e, [all_episodes[z] for z in related], template)
         validate_page(page, e['canonical'])
         writes[root / 'podcast/episodes' / e['slug'] / 'index.html'] = page
@@ -418,6 +424,7 @@ def run(root=ROOT, feed_file=None, audit=False):
         # RSS publication is not a trustworthy modification timestamp. Omit lastmod.
     ET.register_namespace('', namespace[1:-1]); ET.indent(sitemap, space='  ')
     writes[sitemap_path] = '<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(sitemap, encoding='unicode') + '\n'
+    writes[root / 'assets/data/podcast-search-index.json'] = json.dumps(search_index(all_episodes), ensure_ascii=False, separators=(',', ':')) + '\n'
     writes[cache_path] = json.dumps({'feedUrl': FEED, 'episodes': all_episodes}, ensure_ascii=False, indent=2) + '\n'
     # Validate the entire output set before any replacement; replace individual files atomically.
     changes = sum(changed_write(path, content) for path, content in writes.items())
