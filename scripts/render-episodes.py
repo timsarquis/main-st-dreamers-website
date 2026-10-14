@@ -7,6 +7,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     episodes = json.loads((ROOT / 'assets/data/spotify-episodes.json').read_text())['episodes']
+    if not episodes:
+        raise ValueError('Cannot publish an empty episode list')
+    latest = episodes[0]
     items = []
     entities = []
     for e in episodes:
@@ -23,6 +26,10 @@ def main():
         s = re.sub(r'(<ol[^>]*id="spotify-episode-list"[^>]*>).*?(</ol>)',lambda m:m[1]+''.join(items)+m[2],s,flags=re.S)
         s = re.sub(r'<script[^>]*id="episode-schema"[^>]*>.*?</script>\s*','',s,flags=re.S)
         s = s.replace('</head>',schema+'\n</head>')
+        s = re.sub(r'data-preview-episode-id="[A-Za-z0-9]+"', 'data-preview-episode-id="'+latest['id']+'"', s)
+        s = re.sub(r'(id="spotify-playing-title">).*?(</h3>)', lambda m: m[1]+html.escape(latest['title'])+m[2], s)
+        s = re.sub(r'href="[^"]*" id="spotify-featured-link"', 'href="'+latest['url']+'" id="spotify-featured-link"', s)
+        s = re.sub(r'(iframe[^>]*src="https://open.spotify.com/embed/episode/)[A-Za-z0-9]+', lambda m: m[1]+latest['id'], s)
         s = s.replace('Getting the latest episodes…','Recent episodes. Choose an episode below.')
         p.write_text(s)
     print(f'Rendered {len(episodes)} crawlable episodes on homepage and podcast page')

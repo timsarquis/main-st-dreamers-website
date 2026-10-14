@@ -20,6 +20,7 @@ class Page(HTMLParser):
         if tag=='script' and self.schema:self.schemas.append(json.loads(self.data));self.schema=False
 
 def main():
+    latest=json.loads((ROOT/'assets/data/spotify-episodes.json').read_text())['episodes'][0]
     sitemap=ET.parse(ROOT/'sitemap.xml')
     for loc in sitemap.findall('.//{*}loc'):
         route=loc.text.removeprefix('https://mainstdreamers.com')
@@ -31,6 +32,8 @@ def main():
         assert all(not f or f in page.ids for f in page.fragments),(p,page.fragments-page.ids if isinstance(page.fragments,set) else page.fragments)
         if route in ('/','/podcast/'):
             assert '<time datetime=' in source and 'id="episode-schema"' in source,p
+            assert f'data-preview-episode-id="{latest["id"]}"' in source,p
+            assert 'https://open.spotify.com/embed/episode/'+latest['id'] in source,p
     assert 'Sitemap: https://mainstdreamers.com/sitemap.xml' in (ROOT/'robots.txt').read_text()
     assert 'Disallow: /' not in (ROOT/'robots.txt').read_text()
     assert 'noindex' in (ROOT/'404.html').read_text()

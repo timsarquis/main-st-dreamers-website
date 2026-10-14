@@ -12,7 +12,7 @@ Routes: homepage `/`, Podcast `/podcast/`, Shop `/shop/`, Park Scout `/park-scou
 
 Use GitHub Desktop for repository creation, commits, publishing, and pushes. Commit website changes to `main`, then publish the public repository named `main-st-dreamers-website`.
 
-On GitHub: Settings → Pages → Build and deployment → Deploy from a branch → main → / (root) → Save. GitHub Pages serves the repository directly; `.nojekyll` disables Jekyll processing. Get the actual temporary URL from Pages settings. Leave the custom domain blank.
+On GitHub: Settings → Pages → Build and deployment → Source → GitHub Actions. The Refresh podcast episodes workflow publishes the refreshed episode snapshot and website together. Do not enable branch publishing: it can overwrite fresh episode data with the checked-in snapshot. GitHub Pages serves the repository directly; `.nojekyll` disables Jekyll processing. Get the actual temporary URL from Pages settings. Leave the custom domain blank.
 
 ## Future domain migration — not part of initial setup
 
@@ -33,3 +33,5 @@ Production canonical URLs use `https://mainstdreamers.com`. Relative navigation 
 Canonical production pages are listed in `sitemap.xml`; `robots.txt` allows crawling, including search and AI crawlers. This does not guarantee indexing or AI citations. Page-specific titles, descriptions, social previews, and JSON-LD describe the visible content. Podcast and About pages have distinct content; the legacy Park Scout HTML URL redirects to its canonical route. The shop route points to the storefront canonical URL and retains its existing redirect.
 
 `python scripts/render-episodes.py` publishes the current episode snapshot as ordinary HTML links and PodcastEpisode data. It runs after every scheduled Spotify refresh. `python scripts/check-seo.py` checks sitemap routes, canonical URLs, headings, structured-data syntax, in-page links, episode HTML, robots, and 404 indexing controls. The workflow includes both crawler files and deploys on pushes to main. Do not add invented app ratings, availability, or episode descriptions. FAQ markup describes the visible FAQ; no Google FAQ rich result is promised.
+
+The episode renderer also updates the initial featured title, link, preview ID, and iframe to the newest episode, so the initial player matches the current catalog before JavaScript loads.

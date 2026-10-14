@@ -1,6 +1,15 @@
 {
   "episodes": [
     {
+      "id": "6XvB18wkHCqFZS8GjiSZEN",
+      "uri": "spotify:episode:6XvB18wkHCqFZS8GjiSZEN",
+      "url": "https://open.spotify.com/episode/6XvB18wkHCqFZS8GjiSZEN",
+      "title": "Keep It, Change It or Tear It Down: Fixing Disneyland",
+      "releaseDate": "2026-10-12",
+      "durationMs": 3895232,
+      "hasVideo": true
+    },
+    {
       "id": "03TsHNGi1PcGUpgN35gg36",
       "uri": "spotify:episode:03TsHNGi1PcGUpgN35gg36",
       "url": "https://open.spotify.com/episode/03TsHNGi1PcGUpgN35gg36",
@@ -98,17 +107,8 @@
       "releaseDate": "2026-03-09",
       "durationMs": 4239765,
       "hasVideo": true
-    },
-    {
-      "id": "7kXKi1jUk7xmpXbBwCCMDR",
-      "uri": "spotify:episode:7kXKi1jUk7xmpXbBwCCMDR",
-      "url": "https://open.spotify.com/episode/7kXKi1jUk7xmpXbBwCCMDR",
-      "title": "Disney California Adventure at 25: The Wild Story Behind the Reimagining",
-      "releaseDate": "2026-03-02",
-      "durationMs": 4648299,
-      "hasVideo": true
     }
   ],
-  "updatedAt": "2026-10-10T22:57:45.785380+00:00",
+  "updatedAt": "2026-10-14T00:22:22.628047+00:00",
   "stale": false
 }
