@@ -2,6 +2,26 @@
   "feedUrl": "https://anchor.fm/s/fecb83c0/podcast/rss",
   "episodes": [
     {
+      "guid": "692d2641-9c6c-4b2e-8e04-d825d5bc1529",
+      "title": "Disneyland vs. Disney World: What Each Resort Does Better",
+      "slug": "disneyland-vs-disney-world-what-each-resort-does-better",
+      "canonical": "https://mainstdreamers.com/podcast/episodes/disneyland-vs-disney-world-what-each-resort-does-better/",
+      "descriptionHtml": "<p>Disneyland or Disney World? This week, we’re putting them head-to-head and sharing the things we think each resort simply does better.</p><p>From Disneyland’s food, park hopping, Lightning Lane system and classic rides to Disney World’s resorts, transportation, thrill rides and that unbeatable vacation bubble, we each came up with our lists and, surprisingly, we didn’t agree on everything.</p><p>We also talk about the rumors surrounding Disney World’s park entrance technology, the possible future of MagicBands, Disneyland hotel perks, fireworks, parades, security and why the two resorts can feel so completely different even though they’re both Disney.</p><p>Plus, Park Scout is officially live in the App Store! We share a little about why we built it and how it can help make a Disneyland day easier.</p><p>Which resort do you think does it better? Let us know what would make your list.</p><p>🏰 Main St. Dreamers:<br><a href=\"https://mainstdreamers.com/\" rel=\"noopener noreferrer\">https://mainstdreamers.com</a></p><p>📱 Download Park Scout:<br><a href=\"https://apps.apple.com/us/app/park-scout-disneyland-guide/id6814020878\" rel=\"noopener noreferrer\">https://apps.apple.com/us/app/park-scout-disneyland-guide/id6814020878</a></p><p>Listen to the Dreaming of Disney Podcast on all podcast platforms and watch the video version on YouTube.</p>\n",
+      "description": "Disneyland or Disney World? This week, we’re putting them head-to-head and sharing the things we think each resort simply does better.\nFrom Disneyland’s food, park hopping, Lightning Lane system and classic rides to Disney World’s resorts, transportation, thrill rides and that unbeatable vacation bubble, we each came up with our lists and, surprisingly, we didn’t agree on everything.\nWe also talk about the rumors surrounding Disney World’s park entrance technology, the possible future of MagicBands, Disneyland hotel perks, fireworks, parades, security and why the two resorts can feel so completely different even though they’re both Disney.\nPlus, Park Scout is officially live in the App Store! We share a little about why we built it and how it can help make a Disneyland day easier.\nWhich resort do you think does it better? Let us know what would make your list.\n🏰 Main St. Dreamers:https://mainstdreamers.com\n📱 Download Park Scout:https://apps.apple.com/us/app/park-scout-disneyland-guide/id6814020878\nListen to the Dreaming of Disney Podcast on all podcast platforms and watch the video version on YouTube.",
+      "published": "2026-10-26T05:33:22Z",
+      "episodeNumber": "144",
+      "seasonNumber": null,
+      "durationSeconds": 5330,
+      "audioUrl": "https://anchor.fm/s/fecb83c0/podcast/play/128088869/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-26%2Fe755decb-8fa1-2008-c465-53c1bc6eb0c2.mp3",
+      "audioType": "audio/mpeg",
+      "artworkUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/42647504/47d8a7b613a555fe.jpg",
+      "sourceUrl": "https://podcasters.spotify.com/pod/show/dreamingofdisney/episodes/Disneyland-vs--Disney-World-What-Each-Resort-Does-Better-e3r3fb5",
+      "episodeType": "full",
+      "explicit": "false",
+      "transcriptSources": [],
+      "spotifyUrl": "https://open.spotify.com/episode/7h5DW6sAMQ31QujzYJk8FH"
+    },
+    {
       "guid": "2c4ebc98-d347-40dc-9252-a0005720a1ab",
       "title": "Keep It, Change It or Tear It Down: Fixing Disneyland",
       "slug": "keep-it-change-it-or-tear-it-down-fixing-disneyland",
