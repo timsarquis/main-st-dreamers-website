@@ -16,6 +16,14 @@ def feed(title='A &amp; B', guid='one', description='&lt;p&gt;Hello&lt;/p&gt;', 
 
 
 class SynchronizationTests(unittest.TestCase):
+    def test_feed_fetch_bypasses_cache_without_changing_source_identity(self):
+        with patch.object(sync, 'fetch', return_value='<rss/>') as request, patch.object(sync.time, 'time_ns', side_effect=[123, 456]):
+            self.assertEqual(sync.fetch_feed(), '<rss/>')
+            self.assertEqual(sync.fetch_feed(), '<rss/>')
+        urls = [call.args[0] for call in request.call_args_list]
+        self.assertEqual(urls, [sync.FEED + '?_rss_sync=123', sync.FEED + '?_rss_sync=456'])
+        self.assertEqual(sync.FEED, 'https://anchor.fm/s/fecb83c0/podcast/rss')
+
     def test_stable_guid_slug_and_collision(self):
         first, _ = sync.parse_feed(feed(), {})
         changed, _ = sync.parse_feed(feed(title='Renamed'), {'one': first[0]})

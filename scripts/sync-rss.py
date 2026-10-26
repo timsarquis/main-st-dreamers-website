@@ -10,6 +10,7 @@ import logging
 from pathlib import Path
 import re
 import tempfile
+import time
 import unicodedata
 import urllib.parse
 import urllib.request
@@ -49,6 +50,13 @@ def fetch(url):
         if len(raw) > 12_000_000:
             raise ValueError('Resource exceeds 12 MB limit')
         return raw.decode('utf-8-sig')
+
+
+def fetch_feed():
+    # Some feed/CDN edges ignore Cache-Control and keep an old item list.
+    # The nonce changes the request URL only, never persisted episode data.
+    separator = '&' if urllib.parse.urlsplit(FEED).query else '?'
+    return fetch(FEED + separator + urllib.parse.urlencode({'_rss_sync': time.time_ns()}))
 
 
 class ShowNotes(HTMLParser):
@@ -370,7 +378,7 @@ def run(root=ROOT, feed_file=None, audit=False):
     cache_path = root / 'assets/data/rss-episodes.json'
     cached = json.loads(cache_path.read_text()) if cache_path.exists() else {'episodes': []}
     existing = {e['guid']: e for e in cached['episodes']}
-    episodes, issues = parse_feed(Path(feed_file).read_text() if feed_file else fetch(FEED), existing)
+    episodes, issues = parse_feed(Path(feed_file).read_text() if feed_file else fetch_feed(), existing)
     if audit:
         return
     spotify = json.loads((root / 'assets/data/spotify-episodes.json').read_text())['episodes']
