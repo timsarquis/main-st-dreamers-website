@@ -1,6 +1,15 @@
 {
   "episodes": [
     {
+      "id": "7h5DW6sAMQ31QujzYJk8FH",
+      "uri": "spotify:episode:7h5DW6sAMQ31QujzYJk8FH",
+      "url": "https://open.spotify.com/episode/7h5DW6sAMQ31QujzYJk8FH",
+      "title": "Disneyland vs. Disney World: What Each Resort Does Better",
+      "releaseDate": "2026-10-26",
+      "durationMs": 5330616,
+      "hasVideo": false
+    },
+    {
       "id": "6XvB18wkHCqFZS8GjiSZEN",
       "uri": "spotify:episode:6XvB18wkHCqFZS8GjiSZEN",
       "url": "https://open.spotify.com/episode/6XvB18wkHCqFZS8GjiSZEN",
@@ -98,17 +107,8 @@
       "releaseDate": "2026-03-24",
       "durationMs": 2302677,
       "hasVideo": true
-    },
-    {
-      "id": "1TcPANM6vkyrlPTIdVLiSl",
-      "uri": "spotify:episode:1TcPANM6vkyrlPTIdVLiSl",
-      "url": "https://open.spotify.com/episode/1TcPANM6vkyrlPTIdVLiSl",
-      "title": "Still Dreaming: 4 Years of Disney Magic and a Surprise Reunion",
-      "releaseDate": "2026-03-09",
-      "durationMs": 4239765,
-      "hasVideo": true
     }
   ],
-  "updatedAt": "2026-10-14T00:22:22.628047+00:00",
+  "updatedAt": "2026-10-26T06:00:08.540080+00:00",
   "stale": false
 }
