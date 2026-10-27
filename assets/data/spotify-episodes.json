@@ -6,8 +6,8 @@
       "url": "https://open.spotify.com/episode/7h5DW6sAMQ31QujzYJk8FH",
       "title": "Disneyland vs. Disney World: What Each Resort Does Better",
       "releaseDate": "2026-10-26",
-      "durationMs": 5330616,
-      "hasVideo": false
+      "durationMs": 5330560,
+      "hasVideo": true
     },
     {
       "id": "6XvB18wkHCqFZS8GjiSZEN",
@@ -109,6 +109,6 @@
       "hasVideo": true
     }
   ],
-  "updatedAt": "2026-10-26T06:00:08.540080+00:00",
+  "updatedAt": "2026-10-27T06:51:41.854574+00:00",
   "stale": false
 }
