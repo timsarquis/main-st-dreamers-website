@@ -2,6 +2,26 @@
   "feedUrl": "https://anchor.fm/s/fecb83c0/podcast/rss",
   "episodes": [
     {
+      "guid": "3876b4e5-e25f-41db-b200-9cceb5dda293",
+      "title": "One Has to Go! Disney Edition",
+      "slug": "one-has-to-go-disney-edition",
+      "canonical": "https://mainstdreamers.com/podcast/episodes/one-has-to-go-disney-edition/",
+      "descriptionHtml": "<p>What if you had to get rid of one of your favorite Disney rides forever? Or an entire Disney park? Yeah, we&#x27;re making some enemies with this one. 😂</p><p>This week, we&#x27;re playing One Has to Go! We give each other three Disney favorites, but one has to disappear forever. From Rise of the Resistance vs. Guardians of the Galaxy to Disneyland vs. Magic Kingdom vs. EPCOT, we&#x27;re making some pretty controversial choices. And things get personal when Disney snacks, nighttime shows, and even Disney movies are on the chopping block.</p><p>Plus, we&#x27;re talking about the recent Disneyland parking and shuttle headaches, our upcoming Disneyland trip, and why our long-awaited, adults-only Disney cruise might not happen after all. (Apparently having four kids makes spontaneous vacations complicated. Who knew?)</p><p>Now it&#x27;s your turn! Listen along, make your picks, and let us know which of our choices you disagree with most!</p><p>🏰 More Disney fun, podcast episodes, and merch:<br><a href=\"https://mainstdreamers.com\" rel=\"noopener noreferrer\">https://mainstdreamers.com</a></p><p>📱 Make your next Disneyland day easier with Park Scout:<br><a href=\"https://apps.apple.com/us/app/park-scout-disneyland-guide/id6814020878\" rel=\"noopener noreferrer\">https://apps.apple.com/us/app/park-scout-disneyland-guide/id6814020878</a></p>\n",
+      "description": "What if you had to get rid of one of your favorite Disney rides forever? Or an entire Disney park? Yeah, we're making some enemies with this one. 😂\nThis week, we're playing One Has to Go! We give each other three Disney favorites, but one has to disappear forever. From Rise of the Resistance vs. Guardians of the Galaxy to Disneyland vs. Magic Kingdom vs. EPCOT, we're making some pretty controversial choices. And things get personal when Disney snacks, nighttime shows, and even Disney movies are on the chopping block.\nPlus, we're talking about the recent Disneyland parking and shuttle headaches, our upcoming Disneyland trip, and why our long-awaited, adults-only Disney cruise might not happen after all. (Apparently having four kids makes spontaneous vacations complicated. Who knew?)\nNow it's your turn! Listen along, make your picks, and let us know which of our choices you disagree with most!\n🏰 More Disney fun, podcast episodes, and merch:https://mainstdreamers.com\n📱 Make your next Disneyland day easier with Park Scout:https://apps.apple.com/us/app/park-scout-disneyland-guide/id6814020878",
+      "published": "2026-11-16T20:25:33Z",
+      "episodeNumber": null,
+      "seasonNumber": null,
+      "durationSeconds": 3585,
+      "audioUrl": "https://anchor.fm/s/fecb83c0/podcast/play/129565529/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-16%2F436903594-44100-2-777443c3e495a.mp3",
+      "audioType": "audio/mpeg",
+      "artworkUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/42647504/47d8a7b613a555fe.jpg",
+      "sourceUrl": "https://podcasters.spotify.com/pod/show/dreamingofdisney/episodes/One-Has-to-Go--Disney-Edition-e3sghcp",
+      "episodeType": "full",
+      "explicit": "false",
+      "transcriptSources": [],
+      "spotifyUrl": "https://open.spotify.com/episode/18GJnLeWmUWtBcj5WUZjlN"
+    },
+    {
       "guid": "692d2641-9c6c-4b2e-8e04-d825d5bc1529",
       "title": "Disneyland vs. Disney World: What Each Resort Does Better",
       "slug": "disneyland-vs-disney-world-what-each-resort-does-better",

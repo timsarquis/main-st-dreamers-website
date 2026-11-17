@@ -1,6 +1,15 @@
 {
   "episodes": [
     {
+      "id": "18GJnLeWmUWtBcj5WUZjlN",
+      "uri": "spotify:episode:18GJnLeWmUWtBcj5WUZjlN",
+      "url": "https://open.spotify.com/episode/18GJnLeWmUWtBcj5WUZjlN",
+      "title": "One Has to Go! Disney Edition",
+      "releaseDate": "2026-11-16",
+      "durationMs": 3585898,
+      "hasVideo": true
+    },
+    {
       "id": "7h5DW6sAMQ31QujzYJk8FH",
       "uri": "spotify:episode:7h5DW6sAMQ31QujzYJk8FH",
       "url": "https://open.spotify.com/episode/7h5DW6sAMQ31QujzYJk8FH",
@@ -98,17 +107,8 @@
       "releaseDate": "2026-05-04",
       "durationMs": 3464213,
       "hasVideo": true
-    },
-    {
-      "id": "1Z1w44Y9Eo0jteRC5CXX6V",
-      "uri": "spotify:episode:1Z1w44Y9Eo0jteRC5CXX6V",
-      "url": "https://open.spotify.com/episode/1Z1w44Y9Eo0jteRC5CXX6V",
-      "title": "Bluey Took Over Disneyland… and It Was Chaos",
-      "releaseDate": "2026-03-24",
-      "durationMs": 2302677,
-      "hasVideo": true
     }
   ],
-  "updatedAt": "2026-10-27T06:51:41.854574+00:00",
+  "updatedAt": "2026-11-17T01:06:12.525573+00:00",
   "stale": false
 }
